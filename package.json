@@ -1,0 +1,23 @@
+{
+  "name": "arca-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelobrgomes/arca-js.git"
+  },
+  "author": "Marcelo de Britto Gomes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcelobrgomes/arca-js/issues"
+  },
+  "homepage": "https://github.com/marcelobrgomes/arca-js#readme",
+  "dependencies": {
+    "ejs": "^0.8.8",
+    "express": "^4.8.8"
+  }
+}
