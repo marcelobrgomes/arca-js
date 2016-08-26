@@ -15,7 +15,7 @@ module.exports = function() {
     app.set("views", "./app/views");
     
     //Routes
-    var home = require("./app/routes/home");
+    var home = require("../app/routes/home");
     home(app);
     
     return app;
