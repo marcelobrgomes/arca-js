@@ -1,5 +1,5 @@
 module.exports = function(app) {
-    var controller = require("../controllers/home")();
+    var controller = app.controllers.home;
     
     app.get("/", controller.index);  
     app.get("/index", controller.index);  

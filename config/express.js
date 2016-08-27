@@ -1,4 +1,5 @@
 var express = require("express");
+var load = require("express-load");
 
 //module.exports é retornado quando executado o require
 module.exports = function() {
@@ -15,8 +16,10 @@ module.exports = function() {
     app.set("views", "./app/views");
     
     //Routes
-    var home = require("../app/routes/home");
-    home(app);
+    load("models", {cwd: "app"})
+        .then("controllers")
+        .then("routes")
+        .into(app);
     
     return app;
 };
