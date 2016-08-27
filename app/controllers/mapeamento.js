@@ -6,8 +6,18 @@ var mapeamentos = [
 module.exports = function() {
     var controller = {};
     
-    controller.listaMapeamentos = function(req, res) {
+    controller.listaMarkers = function(req, res) {
       res.json(mapeamentos);  
+    };
+    
+    controller.getMarker = function(req, res) {
+        var idMarker = req.params.id;
+        
+        var marker = mapeamentos.filter(function(marker){
+            return idMarker == marker._id;
+        })[0];
+        
+        marker ? res.json(marker) : res.status(404).send("Mapeamento não encontrado.");
     };
     
     return controller;
