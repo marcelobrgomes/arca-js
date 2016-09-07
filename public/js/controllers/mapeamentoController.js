@@ -1,5 +1,4 @@
 angular.module("arca").controller("MapeamentoController", function($scope, $timeout){
-    
     $scope.map;
         $scope.markers = [];
         $scope.markerId = 1;
