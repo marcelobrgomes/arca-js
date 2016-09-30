@@ -32,27 +32,35 @@
     <![endif]-->
 
 <style type="text/css">
-#map {
-    position: absolute; 
-    width: 100%; 
-    height: 70%; 
-    margin: 0 auto 0 auto; 
-    padding: 0;   
-}    
+    #map {
+        position: absolute; 
+        width: 100%; 
+        height: 100%; 
+    }
+    .has-feedback .form-control-feedback {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 34px;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+    }
 </style>
 </head>
 
-<body id="page-top" class="index" ng-controller="ArcaController">
+<body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container">
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top affix">
+        <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Projeto ARCA</a>
+                <a class="navbar-brand page-scroll" href="index.html#page-top">Projeto ARCA</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -73,9 +81,12 @@
                     <li>
                         <a class="page-scroll" href="#team">Equipe</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contato</a>
-                    </li>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group has-feedback">
+                          <input type="text" class="form-control" placeholder="Buscar">
+                        <span id="searchicon" class="fa fa-search fa-lg form-control-feedback"></span>
+                    </form>
+                        </div>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -84,7 +95,7 @@
     </nav>
 
     <!-- Mapeamento Section -->
-    <section id="mapeamento" ng-view>
+    <section id="mapeamento" style="padding: 0px" ng-view>
         
     </section>
     
@@ -93,7 +104,6 @@
     <script src="js/main.js"></script>
     
     <script src="js/controllers/arcaController.js"></script>
-    <script src="js/controllers/mapeamentoController.js"></script>
     
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7RlKUDW9BLFZ1NMNjtozVR5fYSSghauE">
     </script>
@@ -112,10 +122,8 @@
     <script src="js/jqBootstrapValidation.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/agency.min.js"></script>
+    <script src="js/agency.map.js"></script>
     
-    
-
 </body>
 
 </html>

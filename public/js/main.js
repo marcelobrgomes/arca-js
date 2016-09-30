@@ -1,8 +1,13 @@
 angular.module("arca", ["ngRoute"]).config(function($routeProvider){
-    $routeProvider.when("/mapeamentos", {
-        templateUrl: "partials/mapeamentos.html",
-        controller: "MapeamentoController"
+    $routeProvider.when("/mapeamentosExemplo", {
+        templateUrl: "partials/mapeamentosExemplo.html",
+        controller: "MapeamentoExemploController"
     });
     
-    $routeProvider.otherwise({redirectTo: "/mapeamentos"});
+    $routeProvider.when("/mapa", {
+        templateUrl: "partials/mapa.html",
+        controller: "ArcaController"
+    });
+    
+    $routeProvider.otherwise({redirectTo: "/mapeamentosExemplo"});
 });
