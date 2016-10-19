@@ -1,7 +1,16 @@
 var mapeamentos = [
-    {_id: 1, lat: -22.789755, lng: -43.304798, tipo: "MORADOR_RUA"},
-    {_id: 2, lat: -22.790027, lng: -43.304946, tipo: "PONTO_DOACAO"}
-];
+              {
+                  _id: 1,
+                  tipo : 'Morador de Rua',
+                  complemento: 'Conheça um pouco do perfil do(s) morador(es) de rua e veja como pode ajudar:',
+                  qtdHomens: 2,
+                  qtdMulheres: 0,
+                  qtdMenores: 4,
+                  obs : 'As crianças ficam no sinal pedindo dinheiro e os homens dormem na área externa do Gelo e Cevada.',
+                  lat : -22.790759,
+                  lng : -43.3052412
+              }
+          ];
 
 module.exports = function() {
     var controller = {};
