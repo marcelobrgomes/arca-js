@@ -764,7 +764,7 @@ body {
    font-size: 22px;
    font-weight: 400;
    padding: 10px;
-   background-color: #6d36fe;
+   background-color: #36c7fe;
    color: white;
    margin: 1px;
    border-radius: 2px 2px 0 0; /* De acordo com o arredondamento dos cantos da infowindow por padrão. */
@@ -786,3 +786,5 @@ body {
   text-align: center;
 }
 
+
+#over_map { position: absolute; top: 100px; right: 100px; z-index: 99;  background: #ff0}
